@@ -10,10 +10,10 @@ object Module02 extends App {
     .getOrCreate()
 
   // Declaramos una variable para tener el contexto
-  val sc = spark.sparkContext
+  //val sc = spark.sparkContext
 
   // Para ocultar los INFO y WARNING
-  sc.setLogLevel("ERROR")
+  spark.sparkContext.setLogLevel("ERROR")
 
   // Parte 1
   println("--------------------------------------")
@@ -21,7 +21,7 @@ object Module02 extends App {
   println
 
   // Guardamos el path donde están los datos
-  val relato = sc.textFile("src/main/resources/relato.txt")
+  val relato = spark.sparkContext.textFile("src/main/resources/inputs/relato.txt")
 
   println("Número de líneas de relato: " + relato.count())
   println("Relato con collect : " + relato.collect().mkString("Array(", ", ", ")"))
@@ -33,7 +33,33 @@ object Module02 extends App {
   println("Parte 2:")
   println
 
-  val logs = sc.textFile("src/main/resources/weblogs/0213-09-15.log")
+  val logs = spark.sparkContext.textFile("src/main/resources/inputs/weblogs/2013-09-15.log")
   val jpglogs = logs.filter(x => x.contains(".jpg"))
+  println(jpglogs.take(5).mkString("Array(", ", ", ")"))
 
+  val jpglogs2 = jpglogs.count()
+  println("Número de líneas con la cadena .jpg: ", jpglogs2)
+
+  println(logs.map(x => x.length).take(5).mkString("Longitud de los 5 primeros: (", ", ", ")"))
+
+  println("Número de logs con .jpg: ", logs.filter(line =>
+      line.contains(".jpg"))
+    .count())
+
+  var ips = logs.map(line => line.split(' ')(0))
+  println(ips.take(10).mkString("IPS: (", ", ", ")"))
+
+  ips.saveAsTextFile("src/main/resources/outputs/iplist")
+
+  // Parte 3
+  println("--------------------------------------")
+  println("Parte 3:")
+  println
+
+  var alllogs = spark.sparkContext.textFile("src/main/resources/inputs/weblogs/*")
+  alllogs.map(line => line.split(' ')(0)).saveAsTextFile("src/main/resources/outputs/iplistw")
+
+  var htmllogs  = alllogs.filter(_.contains(".html")).map(line => (line.split(' ')(0), line.split(' ')(2)))
+  println("IPs e IDs: ")
+  htmllogs.take(5).foreach(t => println(t._1 + " / " + t._2))
 }
