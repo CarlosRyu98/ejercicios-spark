@@ -7,7 +7,7 @@ object Module04 extends App {
   // Declaración de la Spark Session
   val spark = SparkSession.builder()
     .master("local[1]")
-    .appName("Module02")
+    .appName("Module04")
     .getOrCreate()
 
   // Para ocultar los INFO y WARNING
@@ -37,10 +37,34 @@ object Module04 extends App {
   println("Parte 2:")
   println
 
-  var accounts = spark.sparkContext.textFile("src/main/resources/inputs/accounts.csv")
-  accounts = accounts.map(line => line.split(',')).map(account => (account(0), account))
+  var data = spark.sparkContext.textFile("src/main/resources/inputs/accounts.csv")
+  var accounts = data.map(line => line.split(',')).map(account => (account(0), account))
+
+  accounts.take(5).foreach(println)
 
   var accounthits = accounts.join(usercountorder)
 
+  // accounthits.take(5).foreach(println)
+
+  var accdetails = data.map(line => line.split(',')).map(account => (account(0), account(4), account(5)))
+
+  accdetails.take(5).foreach(println)
+
+  // Parte 3
+  println("--------------------------------------")
+  println("Parte 3:")
+  println
+
+  var accountsByPCode = data.map(_.split(',')).keyBy(_(8))
+  accountsByPCode.take(5).foreach{
+    case(x, y) => println("\n---" + x)
+      y.foreach(println)
+  }
+
+  var namesByPCode = accountsByPCode.mapValues(values => values(4) + ',' + values(3)).groupByKey()
+  namesByPCode.take(5).foreach{
+    case(x, y) => println("---" + x)
+    y.foreach(println)
+  }
 
 }

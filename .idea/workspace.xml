@@ -5,199 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3cd2f9ba-ac65-4414-8dc7-78604ae33c32" name="Changes" comment="mod02">
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/ejercicios/Module04.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <changelist_data name="carlos.ivaquero" email="carlos.ivaquero@bosonit.com" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/DataSetPartidos.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/DataSetPartidos.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/StreamingLogs.scalaspark" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/StreamingLogs.scalaspark" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/accounts.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/accounts.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/relato.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/relato.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/simpsons(1).csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/simpsons(1).csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/streamtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/streamtest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-09-15.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-09-15.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-09-16.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-09-16.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-09-17.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-09-17.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-09-18.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-09-18.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-09-19.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-09-19.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-09-20.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-09-20.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-09-21.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-09-21.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-09-22.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-09-22.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-09-23.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-09-23.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-09-24.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-09-24.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-09-25.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-09-25.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-09-26.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-09-26.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-09-27.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-09-27.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-09-28.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-09-28.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-09-29.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-09-29.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-09-30.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-09-30.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-01.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-01.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-02.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-02.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-03.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-03.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-04.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-04.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-05.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-05.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-06.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-06.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-07.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-07.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-08.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-08.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-09.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-09.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-10.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-10.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-11.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-11.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-12.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-12.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-13.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-13.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-14.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-14.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-15.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-15.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-16.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-16.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-17.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-17.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-18.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-18.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-19.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-19.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-20.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-20.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-21.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-21.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-22.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-22.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-23.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-23.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-24.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-24.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-25.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-25.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-26.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-26.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-27.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-27.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-28.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-28.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-29.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-29.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-30.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-30.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-10-31.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-10-31.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-01.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-01.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-02.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-02.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-03.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-03.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-04.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-04.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-05.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-05.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-06.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-06.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-07.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-07.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-08.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-08.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-09.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-09.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-10.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-10.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-11.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-11.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-12.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-12.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-13.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-13.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-14.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-14.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-15.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-15.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-16.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-16.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-17.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-17.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-18.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-18.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-19.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-19.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-20.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-20.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-21.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-21.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-22.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-22.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-23.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-23.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-24.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-24.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-25.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-25.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-26.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-26.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-27.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-27.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-28.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-28.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-29.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-29.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-11-30.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-11-30.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-01.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-01.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-02.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-02.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-03.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-03.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-04.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-04.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-05.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-05.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-06.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-06.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-07.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-07.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-08.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-08.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-09.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-09.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-10.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-10.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-11.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-11.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-12.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-12.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-13.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-13.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-14.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-14.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-15.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-15.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-16.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-16.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-17.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-17.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-18.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-18.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-19.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-19.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-20.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-20.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-21.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-21.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-22.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-22.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-23.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-23.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-24.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-24.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-25.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-25.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-26.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-26.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-27.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-27.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-28.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-28.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-29.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-29.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-30.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-30.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2013-12-31.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2013-12-31.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-01.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-01.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-02.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-02.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-03.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-03.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-04.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-04.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-05.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-05.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-06.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-06.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-07.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-07.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-08.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-08.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-09.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-09.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-10.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-10.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-11.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-11.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-12.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-12.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-13.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-13.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-14.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-14.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-15.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-15.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-16.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-16.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-17.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-17.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-18.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-18.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-19.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-19.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-20.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-20.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-21.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-21.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-22.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-22.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-23.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-23.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-24.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-24.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-25.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-25.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-26.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-26.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-27.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-27.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-28.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-28.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-29.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-29.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-30.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-30.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-01-31.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-01-31.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-01.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-01.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-02.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-02.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-03.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-03.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-04.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-04.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-05.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-05.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-06.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-06.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-07.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-07.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-08.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-08.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-09.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-09.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-10.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-10.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-11.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-11.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-12.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-12.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-13.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-13.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-14.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-14.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-15.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-15.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-16.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-16.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-17.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-17.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-18.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-18.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-19.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-19.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-20.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-20.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-21.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-21.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-22.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-22.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-23.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-23.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-24.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-24.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-25.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-25.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-26.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-26.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-27.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-27.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-02-28.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-02-28.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-03-01.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-03-01.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-03-02.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-03-02.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-03-03.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-03-03.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-03-04.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-03-04.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-03-05.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-03-05.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-03-06.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-03-06.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-03-07.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-03-07.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-03-08.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-03-08.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-03-09.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-03-09.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-03-10.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-03-10.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-03-11.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-03-11.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-03-12.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-03-12.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-03-13.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-03-13.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-03-14.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-03-14.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/weblogs/2014-03-15.log" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/weblogs/2014-03-15.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/zips.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/inputs/zips.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/org/ejercicios/Module02.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/ejercicios/Module02.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/org/ejercicios/Module04.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/ejercicios/Module04.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -243,7 +53,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "Scala Compiler"
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -331,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658328216283</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="mod02">
+      <created>1658476452087</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1658476452087</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -346,6 +163,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
     <MESSAGE value="com" />
