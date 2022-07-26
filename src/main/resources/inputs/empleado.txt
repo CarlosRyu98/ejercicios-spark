@@ -1,0 +1,5 @@
+1201,nombre1,25
+1202,nombre2,28
+1203,nombre3,39
+1204,nombre4,23
+1205,nombre5,23
