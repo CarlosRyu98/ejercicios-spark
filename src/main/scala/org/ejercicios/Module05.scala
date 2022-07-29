@@ -1,5 +1,9 @@
 package org.ejercicios
 
+import org.sameersingh.scalaplot.Implicits._
+import org.sameersingh.scalaplot.gnuplot.GnuplotPlotter
+import org.sameersingh.scalaplot.{MemXYSeries, XYData, XYChart}
+import org.apache.spark.rdd
 import org.apache.spark.sql.types.{StringType, StructField, StructType}
 import org.apache.spark.sql.{Row, SQLContext, SparkSession}
 import org.apache.spark.sql.hive.HiveContext
@@ -150,6 +154,7 @@ object Module05 extends App {
     .option("header", "true")
     .option("inferSchema","true")
     .load("src/main/resources/inputs/simpsons.csv")
+  df.show()
 
   // Registrar tabla
   println("Registrando tabla")
@@ -159,10 +164,32 @@ object Module05 extends App {
   println("Seleccionando datos")
   val datos2 = spark.sqlContext.sql("" +
     "select cast(season as int), mean(imdb_rating) " +
-    "from episodios " +
+    "from NombreVirtual " +
     "group by season " +
     "order by cast(season as int) asc")
 
-  df.show()
+  datos2.show()
+
+  // val rdd = datos2.rdd.map(line => (line.getDouble(0), line.getDouble(1)))
+  val rdd = datos2.rdd.map(line => (line.getInt(0), line.getDouble(1)))
+
+  val x = rdd.map({
+    case (key, value) =>
+      key.toDouble
+  })
+
+  val y = rdd.map({
+    case (key, value) =>
+      value
+  })
+
+  // Preparar el Chart
+  println("Preparando Series")
+  val series = new MemXYSeries(x.collect(), y.collect(), "puntuacion")
+  println("Preparando Data")
+  val data = new XYData(series)
+  println("Preparando Chart")
+  val chart = new XYChart("Media de puntuación de episodios de los Simpsons por temporada", data)
+  // output(PNG("src/main/resources/outputs", "test"), chart)
 
 }
