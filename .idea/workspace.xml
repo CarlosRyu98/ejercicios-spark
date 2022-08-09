@@ -4,18 +4,48 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3cd2f9ba-ac65-4414-8dc7-78604ae33c32" name="Changes" comment="mod05">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/inputs/shakespeare/comedies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/inputs/shakespeare/glossary" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/inputs/shakespeare/histories" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/inputs/shakespeare/poems" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/inputs/shakespeare/tragedies" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/inputs/stop-word-list.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/ejercicios/Module04_Opt.scala" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/scala/org/ejercicios/Module06.scala" afterDir="false" />
+    <list default="true" id="db766dba-2e44-47fa-beb2-893cba1e8727" name="Changes" comment="learning spark v2">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/01_oneHotEncoder_4953d1936386/data/_SUCCESS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/01_oneHotEncoder_4953d1936386/data/_committed_2079527968196944861" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/01_oneHotEncoder_4953d1936386/data/_started_2079527968196944861" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/01_oneHotEncoder_4953d1936386/metadata/_SUCCESS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/01_oneHotEncoder_4953d1936386/metadata/part-00000" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/03_oneHotEncoder_33250a9607f8/data/_SUCCESS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/03_oneHotEncoder_33250a9607f8/data/_committed_1737519085480631885" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/03_oneHotEncoder_33250a9607f8/data/_started_1737519085480631885" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/03_oneHotEncoder_33250a9607f8/metadata/_SUCCESS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/03_oneHotEncoder_33250a9607f8/metadata/part-00000" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/05_oneHotEncoder_6a45e1370f07/data/_SUCCESS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/05_oneHotEncoder_6a45e1370f07/data/_committed_2553817499036123685" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/05_oneHotEncoder_6a45e1370f07/data/_started_2553817499036123685" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/05_oneHotEncoder_6a45e1370f07/metadata/_SUCCESS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/05_oneHotEncoder_6a45e1370f07/metadata/part-00000" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/07_oneHotEncoder_e7c6f7ce28e0/data/_SUCCESS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/07_oneHotEncoder_e7c6f7ce28e0/data/_committed_1091098354965480121" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/07_oneHotEncoder_e7c6f7ce28e0/data/_started_1091098354965480121" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/07_oneHotEncoder_e7c6f7ce28e0/metadata/_SUCCESS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/07_oneHotEncoder_e7c6f7ce28e0/metadata/part-00000" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/09_oneHotEncoder_099bc6a266be/data/_SUCCESS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/09_oneHotEncoder_099bc6a266be/data/_committed_714447836921176592" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/09_oneHotEncoder_099bc6a266be/data/_started_714447836921176592" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/09_oneHotEncoder_099bc6a266be/metadata/_SUCCESS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/09_oneHotEncoder_099bc6a266be/metadata/part-00000" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/11_oneHotEncoder_5aebd3179a5a/data/_SUCCESS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/12_strIdx_9000b1835d75/metadata/part-00000" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/14_strIdx_de78b4034b53/data/_SUCCESS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/14_strIdx_de78b4034b53/data/_committed_3075108839144722058" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/14_strIdx_de78b4034b53/data/_started_3075108839144722058" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/14_strIdx_de78b4034b53/metadata/_SUCCESS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/14_strIdx_de78b4034b53/metadata/part-00000" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/16_vecAssembler_85d2cff6b603/metadata/_SUCCESS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/16_vecAssembler_85d2cff6b603/metadata/part-00000" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/17_linReg_22bc9e0ff0b1/data/_SUCCESS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/17_linReg_22bc9e0ff0b1/data/_committed_841328777751729849" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/17_linReg_22bc9e0ff0b1/data/_started_841328777751729849" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/17_linReg_22bc9e0ff0b1/metadata/_SUCCESS" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/learning/inputs/sf-airbnb/lr-pipeline-model/stages/17_linReg_22bc9e0ff0b1/metadata/part-00000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/org/ejercicios/Module05.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/org/ejercicios/Module05.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,22 +93,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable": "ALL",
-    "last_opened_file_path": "C:/Users/carlos.ivaquero/Documents/IntelliJ Projects/ejercicios-spark/src/main/scala",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.openapi.externalSystem.service.settings.ExternalSystemGroupConfigurable&quot;: &quot;ALL&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/carlos.ivaquero/Documents/IntelliJ Projects/ejercicios-spark/src/main/scala&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\carlos.ivaquero\Documents\IntelliJ Projects\ejercicios-spark\src\main\scala" />
@@ -213,7 +243,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658849259731</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="learning spark v2">
+      <created>1660038522754</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1660038522754</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -228,12 +265,15 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
     <MESSAGE value="com" />
     <MESSAGE value="mod02" />
     <MESSAGE value="mod04" />
     <MESSAGE value="mod05" />
-    <option name="LAST_COMMIT_MESSAGE" value="mod05" />
+    <MESSAGE value="learning spark v2" />
+    <option name="LAST_COMMIT_MESSAGE" value="learning spark v2" />
   </component>
 </project>
