@@ -2,6 +2,8 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+/src/main/resources/**/outputs
+/src/main/resources/**/outputs/*
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
@@ -36,4 +38,4 @@ build/
 
 ### Mac OS ###
 .DS_Store
-/src/main/resources/outputs/
+/src/main/resources/ejercicios/outputs/*
