@@ -18,6 +18,7 @@ object Chapter4 {
       .builder()
       .master("local")
       .appName("Chapter4")
+      .config("spark.sql.catalogImplementation","hive")
       .getOrCreate()
 
     // Para ocultar los INFO y WARNING
@@ -39,17 +40,21 @@ object Chapter4 {
     spark.sql("""CREATE DATABASE learn_spark_db""")
     spark.sql("""USE learn_spark_db""")
 
-    spark.sql("""CREATE OR REPLACE TABLE managed_us_delay_flights_tbl
+    spark.sql("""CREATE TABLE managed_us_delay_flights_tbl
           (date STRING, delay INT, distance INT, origin STRING, destination STRING)""")
+
+    spark.sql("SELECT * FROM managed_us_delay_flights_tbl").show(10)
 
     spark.sql("""CREATE TABLE us_delay_flights_tbl(date STRING, delay INT,
              distance INT, origin STRING, destination STRING)
              USING csv OPTIONS (PATH
              'src/main/resources/learning/inputs/departuredelays.csv')""")
 
-    spark.catalog.listDatabases()
-    spark.catalog.listTables()
-    spark.catalog.listColumns("us_delay_flights_tbl")
+    spark.sql("SELECT * FROM us_delay_flights_tbl").show(10)
+
+    spark.catalog.listDatabases().show(false)
+    spark.catalog.listTables().show(false)
+    spark.catalog.listColumns("us_delay_flights_tbl").show(false)
 
      // In Scala
      // Use Parquet
@@ -148,31 +153,31 @@ object Chapter4 {
 
     spark.sql("""SELECT * FROM us_delay_flights_tbl""").show()
 
-    // Leyendo un fichero csv a DataFrame
-    val file5 = "src/main/resources/learning/inputs/flights/summary-data/avro/*"
-    val df8 = spark.read.format("avro").load(file5)
-    df8.show()
-
-    // Leyendo un fichero a tabla SQL
-    spark.sql("""CREATE OR REPLACE TEMPORARY VIEW us_delay_flights_tbl
-             USING avro
-             OPTIONS (
-             path 'src/main/resources/learning/inputs/flights/summary-data/avro/*' )""")
-
-    spark.sql("""SELECT * FROM us_delay_flights_tbl""").show()
-
-    // Escribiendo DataFrames en archivos csv
-    df8.write.format("avro")
-      .mode("overwrite")
-      .save("src/main/resources/learning/outputs/flights/avro/df_avro")
-
-    // Escribiendo DataFrames a tabla SQL
-    df8.write
-      .mode("overwrite")
-      .saveAsTable("us_delay_flights_tbl")
-
-
-    spark.sql("""SELECT * FROM us_delay_flights_tbl""").show()
+//    // Leyendo un fichero csv a DataFrame
+//    val file5 = "src/main/resources/learning/inputs/flights/summary-data/avro/*"
+//    val df8 = spark.read.format("avro").load(file5)
+//    df8.show()
+//
+//    // Leyendo un fichero a tabla SQL
+//    spark.sql("""CREATE OR REPLACE TEMPORARY VIEW us_delay_flights_tbl
+//             USING avro
+//             OPTIONS (
+//             path 'src/main/resources/learning/inputs/flights/summary-data/avro/*' )""")
+//
+//    spark.sql("""SELECT * FROM us_delay_flights_tbl""").show()
+//
+//    // Escribiendo DataFrames en archivos csv
+//    df8.write.format("avro")
+//      .mode("overwrite")
+//      .save("src/main/resources/learning/outputs/flights/avro/df_avro")
+//
+//    // Escribiendo DataFrames a tabla SQL
+//    df8.write
+//      .mode("overwrite")
+//      .saveAsTable("us_delay_flights_tbl")
+//
+//
+//    spark.sql("""SELECT * FROM us_delay_flights_tbl""").show()
 
     spark.stop()
 
