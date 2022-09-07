@@ -21,14 +21,14 @@ object logs {
     val logs_csv = spark.read.csv("src/main/resources/logs/inputs/*")
 
     // Preparación del RegEx
-    val regex = """(\S+)\s(-|\S+)\s(-|\S+)\s\[(\S+)\s-0400\]\s\"(\S+)\s(\S+)\s(\S+)\"\s(\d+)\s(\d+)"""
+    val regex = """(\S+)\s(-|\S+)\s(-|\S+)\s\[(\S+)\s-0400\]\s\"(\S+)\s(\S+)\s(\S+)\"\s(\S+)\s(\S+)"""
     // val regex = """(\S+)\s(-|\S+)\s(-|\S+)\s\[(\S+)\s-\d+\]\s\"(\S+)\s(\S+)\s(\S+)\"\s(\d+)\s(\d+)"""
 
     val logs_df_raw = logs_csv.select(
       regexp_extract(col("_c0"), regex, 1).alias("host"),
       regexp_extract(col("_c0"), regex, 2).alias("user-identifier"),
       regexp_extract(col("_c0"), regex, 3).alias("userid"),
-      regexp_extract(col("_c0"), regex, 4).alias("date"),
+      regexp_extract(col("_c0"), regex, 4).alias("date"), // podemos poner el to_timestamp directamente aquí
       regexp_extract(col("_c0"), regex, 5).alias("request-method"),
       regexp_extract(col("_c0"), regex, 6).alias("resource"),
       regexp_extract(col("_c0"), regex, 7).alias("protocol"),
