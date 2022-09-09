@@ -1,31 +1,12 @@
 package org.logs
 
+import org.apache.spark.sql.DataFrame
 import org.apache.spark.sql.functions._
 
 object logs extends App with org.sparksession.spark {
 
-    // Lectura de los archivos
-    val logs_csv = spark.read.csv("src/main/resources/logs/inputs/*")
-
-    // Preparación del RegEx
-    val regex = """(\S+)\s(-|\S+)\s(-|\S+)\s\[(\S+)\s-0400\]\s\"(\S+)\s(\S+)\s(\S+)\"\s(\S+)\s(\S+)"""
-    // val regex = """(\S+)\s(-|\S+)\s(-|\S+)\s\[(\S+)\s-\d+\]\s\"(\S+)\s(\S+)\s(\S+)\"\s(\d+)\s(\d+)"""
-
-    val logs_df_raw = logs_csv.select(
-      regexp_extract(col("_c0"), regex, 1).alias("host"),
-      regexp_extract(col("_c0"), regex, 2).alias("user-identifier"),
-      regexp_extract(col("_c0"), regex, 3).alias("userid"),
-      regexp_extract(col("_c0"), regex, 4).alias("date"), // podemos poner el to_timestamp directamente aquí
-      regexp_extract(col("_c0"), regex, 5).alias("request-method"),
-      regexp_extract(col("_c0"), regex, 6).alias("resource"),
-      regexp_extract(col("_c0"), regex, 7).alias("protocol"),
-      regexp_extract(col("_c0"), regex, 8).cast("integer").alias("http-status-code"),
-      regexp_extract(col("_c0"), regex, 9).cast("integer").alias("size")
-    )
-
-    // Pasar la columna date a formato timestamp
-    val logs_df = logs_df_raw.withColumn("date", to_timestamp(logs_df_raw("date"), "dd/MMM/yyyy:HH:mm:ss"))
-    logs_df.show(5)
+  val logs_df = createDF()
+  logs_df.show()
 
   //¿Cuáles son los distintos protocolos web utilizados? Agrúpalos.
   protocols()
@@ -53,6 +34,31 @@ object logs extends App with org.sparksession.spark {
 
   //¿Cuál es el número de errores 404 que ha habido cada día?
   errorPerDay()
+
+  private def createDF(): DataFrame = {
+    // Lectura de los archivos
+    val logs_csv = spark.read.csv("src/main/resources/logs/inputs/*")
+
+    // Preparación del RegEx
+    val regex = """(\S+)\s(-|\S+)\s(-|\S+)\s\[(\S+)\s-0400\]\s\"(\S+)\s(\S+)\s(\S+)\"\s(\S+)\s(\S+)"""
+    // val regex = """(\S+)\s(-|\S+)\s(-|\S+)\s\[(\S+)\s-\d+\]\s\"(\S+)\s(\S+)\s(\S+)\"\s(\d+)\s(\d+)"""
+
+    val logs_df_raw = logs_csv.select(
+      regexp_extract(col("_c0"), regex, 1).alias("host"),
+      regexp_extract(col("_c0"), regex, 2).alias("user-identifier"),
+      regexp_extract(col("_c0"), regex, 3).alias("userid"),
+      regexp_extract(col("_c0"), regex, 4).alias("date"), // podemos poner el to_timestamp directamente aquí
+      regexp_extract(col("_c0"), regex, 5).alias("request-method"),
+      regexp_extract(col("_c0"), regex, 6).alias("resource"),
+      regexp_extract(col("_c0"), regex, 7).alias("protocol"),
+      regexp_extract(col("_c0"), regex, 8).cast("integer").alias("http-status-code"),
+      regexp_extract(col("_c0"), regex, 9).cast("integer").alias("size")
+    )
+
+    // Pasar la columna date a formato timestamp
+    logs_df_raw.withColumn("date", to_timestamp(logs_df_raw("date"), "dd/MMM/yyyy:HH:mm:ss"))
+
+  }
 
   private def protocols(): Unit = {
     println("¿Cuáles son los distintos protocolos web utilizados? Agrúpalos.")
