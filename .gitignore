@@ -43,3 +43,4 @@ build/
 /src/main/resources/ejercicios/outputs/*
 /src/main/resources/learning/inputs/sf-airbnb/
 /metastore_db/
+/src/main/resources/lotds/inputs/*
