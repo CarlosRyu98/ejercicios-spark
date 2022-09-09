@@ -10,11 +10,62 @@ object padron extends App with org.sparksession.spark {
   // importando el csv.Sería recomendable intentarlo con opciones que quiten las "" de los campos,
   // que ignoren los espacios innecesarios en los campos, que sustituyan los valores vacíos por 0 y que infiera el esquema.
   val padron_df = e61()
-  // 6.8) Particiona el DataFrame por las variables DESC_DISTRITO y DESC_BARRIO.
-  val padron_part = e68()
 
   // 6.3) Enumera todos los barrios diferentes.
   e63()
+
+  // 6.4) Crea una vista temporal de nombre "padron" y a través de ella cuenta el número de barrios diferentes que hay.
+  e64()
+
+  // 6.5) Crea una nueva columna que muestre la longitud de los campos de la columna DESC_DISTRITO y que se llame "longitud".
+  e65()
+
+  // 6.6) Crea una nueva columna que muestre el valor 5 para cada uno de los registros de la tabla.
+  e66()
+
+  // 6.7) Borra esta columna.
+  e67(e66())
+
+  // 6.8) Particiona el DataFrame por las variables DESC_DISTRITO y DESC_BARRIO.
+  val padron_part = e68()
+
+  // 6.9) Almacénalo en caché. Consulta en el puerto 4040 (UI de Spark) de tu usuario local el estado de los rdds almacenados.
+  e69()
+
+  // 6.10) Lanza una consulta contra el DF resultante en la que muestre el número total de
+  // "espanoleshombres", "espanolesmujeres", extranjeroshombres" y "extranjerosmujeres" para cada barrio de cada distrito.
+  // Las columnas distrito y barrio deben ser las primeras en aparecer en el show.
+  // Los resultados deben estar ordenados en orden de más a menos según la columna "extranjerosmujeres"
+  // y desempatarán por la columna "extranjeroshombres".
+  e610()
+
+  // 6.11) Elimina el registro en caché.
+  e611()
+
+  // 6.12) Crea un nuevo DataFrame a partir del original que muestre únicamente una columna con DESC_BARRIO,
+  // otra con DESC_DISTRITO y otra con el número total de "espanoleshombres" residentes en cada distrito de cada barrio.
+  // Únelo (con un join) con el DataFrame original a través de las columnas en común.
+  e612()
+
+  // 6.13) Repite la función anterior utilizando funciones de ventana. (over(Window.partitionBy.....)).
+  e613()
+
+  // 6.14) Mediante una función Pivot muestra una tabla (que va a ser una tabla de contingencia) que contenga los valores totales (la suma de valores)
+  // de espanolesmujeres para cada distrito y en cada rango de edad COD_EDAD_INT).
+  // Los distritos incluidos deben ser únicamente CENTRO, BARAJAS y RETIRO y deben figurar como columnas.
+  // El aspecto debe ser similar a este:
+
+  // 6.15) Utilizando este nuevo DF, crea 3 columnas nuevas que hagan referencia a qué porcentaje de la suma de "espanolesmujeres"
+  // en los tres distritos para cada rango de edad representa cada uno de los tres distritos. Debe estar redondeada a 2 decimales.
+  // Puedes imponerte la condición extra de no apoyarte en ninguna columna auxiliar creada para el caso.
+  e615(e614())
+
+  // 6.16) Guarda el archivo csv original particionado por distrito y por barrio (en ese orden) en un directorio local.
+  // Consulta el directorio para ver la estructura de los ficheros y comprueba que es la esperada.
+  e616()
+
+  // 6.17) Haz el mismo guardado pero en formato parquet. Compara el peso del archivo con el resultado anterior.
+  e617()
 
   private def e61(): DataFrame = {
     println("* 6.1) Comenzamos realizando la misma práctica que hicimos en Hive en Spark, importando el csv." +
@@ -38,17 +89,11 @@ object padron extends App with org.sparksession.spark {
 
   }
 
-  // 6.4) Crea una vista temporal de nombre "padron" y a través de ella cuenta el número de barrios diferentes que hay.
-  e64()
-
   private def e63(): Unit = {
     println("6.3) Enumera todos los barrios diferentes.")
     val barrios = padron_df.select("DESC_BARRIO").distinct()
     barrios.show()
   }
-
-  // 6.5) Crea una nueva columna que muestre la longitud de los campos de la columna DESC_DISTRITO y que se llame "longitud".
-  e65()
 
   private def e64(): Unit = {
     println("6.4) Crea una vista temporal de nombre \"padron\" y a través de ella cuenta el número de barrios diferentes que hay.")
@@ -57,17 +102,11 @@ object padron extends App with org.sparksession.spark {
     spark.sqlContext.sql("select count(distinct DESC_BARRIO) from padron").show()
   }
 
-  // 6.6) Crea una nueva columna que muestre el valor 5 para cada uno de los registros de la tabla.
-  e66()
-
   private def e65(): Unit = {
     println("6.5) Crea una nueva columna que muestre la longitud de los campos de la columna DESC_DISTRITO y que se llame \"longitud\".")
     val padron_long = padron_df.withColumn("longitud", length(col("DESC_DISTRITO")))
     padron_long.show()
   }
-
-  // 6.7) Borra esta columna.
-  e67(e66())
 
   private def e66(): DataFrame = {
     println("6.6) Crea una nueva columna que muestre el valor 5 para cada uno de los registros de la tabla.")
@@ -88,20 +127,10 @@ object padron extends App with org.sparksession.spark {
     padron_part
   }
 
-  // 6.9) Almacénalo en caché. Consulta en el puerto 4040 (UI de Spark) de tu usuario local el estado de los rdds almacenados.
-  e69
-
-  private def e69 = {
+  private def e69(): Unit = {
     println("6.9) Almacénalo en caché. Consulta en el puerto 4040 (UI de Spark) de tu usuario local el estado de los rdds almacenados.")
     padron_part.cache()
   }
-
-  // 6.10) Lanza una consulta contra el DF resultante en la que muestre el número total de
-  // "espanoleshombres", "espanolesmujeres", extranjeroshombres" y "extranjerosmujeres" para cada barrio de cada distrito.
-  // Las columnas distrito y barrio deben ser las primeras en aparecer en el show.
-  // Los resultados deben estar ordenados en orden de más a menos según la columna "extranjerosmujeres"
-  // y desempatarán por la columna "extranjeroshombres".
-  e610()
 
   private def e610(): Unit = {
     println("6.10) Lanza una consulta contra el DF resultante en la que muestre el número total de" +
@@ -116,18 +145,10 @@ object padron extends App with org.sparksession.spark {
       .show()
   }
 
-  // 6.11) Elimina el registro en caché.
-  e611
-
-  private def e611 = {
+  private def e611(): Unit = {
     println("6.11) Elimina el registro en caché.")
     padron_part.unpersist()
   }
-
-  // 6.12) Crea un nuevo DataFrame a partir del original que muestre únicamente una columna con DESC_BARRIO,
-  // otra con DESC_DISTRITO y otra con el número total de "espanoleshombres" residentes en cada distrito de cada barrio.
-  // Únelo (con un join) con el DataFrame original a través de las columnas en común.
-  e612()
 
   private def e612(): Unit = {
     println("6.12) Crea un nuevo DataFrame a partir del original que muestre únicamente una columna con DESC_BARRIO," +
@@ -143,9 +164,6 @@ object padron extends App with org.sparksession.spark {
       .show()
   }
 
-  // 6.13) Repite la función anterior utilizando funciones de ventana. (over(Window.partitionBy.....)).
-  e613()
-
   private def e613(): Unit = {
     println("6.13) Repite la función anterior utilizando funciones de ventana. (over(Window.partitionBy.....)).")
     padron_df.withColumn("Suma", sum("EspanolesHombres") over Window.partitionBy("DESC_BARRIO", "DESC_DISTRITO"))
@@ -153,11 +171,6 @@ object padron extends App with org.sparksession.spark {
       .distinct
       .show()
   }
-
-  // 6.14) Mediante una función Pivot muestra una tabla (que va a ser una tabla de contingencia) que contenga los valores totales (la suma de valores)
-  // de espanolesmujeres para cada distrito y en cada rango de edad COD_EDAD_INT).
-  // Los distritos incluidos deben ser únicamente CENTRO, BARAJAS y RETIRO y deben figurar como columnas.
-  // El aspecto debe ser similar a este:
 
   private def e614(): DataFrame = {
     println("6.14) Mediante una función Pivot muestra una tabla (que va a ser una tabla de contingencia) que contenga los valores totales (la suma de valores)" +
@@ -172,11 +185,6 @@ object padron extends App with org.sparksession.spark {
     padron_pivot
   }
 
-  // 6.15) Utilizando este nuevo DF, crea 3 columnas nuevas que hagan referencia a qué porcentaje de la suma de "espanolesmujeres"
-  // en los tres distritos para cada rango de edad representa cada uno de los tres distritos. Debe estar redondeada a 2 decimales.
-  // Puedes imponerte la condición extra de no apoyarte en ninguna columna auxiliar creada para el caso.
-  e615(e614())
-
   private def e615(padron_pivot: DataFrame): Unit = {
     println("6.15) Utilizando este nuevo DF, crea 3 columnas nuevas que hagan referencia a qué porcentaje de la suma de \"espanolesmujeres\"" +
       "\nen los tres distritos para cada rango de edad representa cada uno de los tres distritos. Debe estar redondeada a 2 decimales." +
@@ -188,10 +196,6 @@ object padron extends App with org.sparksession.spark {
     padron_percent.show()
   }
 
-  // 6.16) Guarda el archivo csv original particionado por distrito y por barrio (en ese orden) en un directorio local.
-  // Consulta el directorio para ver la estructura de los ficheros y comprueba que es la esperada.
-  e616()
-
   private def e616(): Unit = {
     println("6.16) Guarda el archivo csv original particionado por distrito y por barrio (en ese orden) en un directorio local." +
       "\nConsulta el directorio para ver la estructura de los ficheros y comprueba que es la esperada.")
@@ -200,9 +204,6 @@ object padron extends App with org.sparksession.spark {
       .mode("overwrite")
       .save("src/main/resources/padron/outputs/PadronCSV")
   }
-
-  // 6.17) Haz el mismo guardado pero en formato parquet. Compara el peso del archivo con el resultado anterior.
-  e617()
 
   private def e617(): Unit = {
     println("6.17) Haz el mismo guardado pero en formato parquet. Compara el peso del archivo con el resultado anterior.")
