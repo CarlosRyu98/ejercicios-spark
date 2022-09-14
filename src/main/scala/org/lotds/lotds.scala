@@ -1,5 +1,6 @@
 package org.lotds
 
+import org.apache.spark.sql.expressions.Window
 import org.apache.spark.sql.functions._
 
 object lotds extends App with org.sparksession.spark {
@@ -27,12 +28,13 @@ object lotds extends App with org.sparksession.spark {
   Exercise3()
 
   // Create a new column called "hashed_bill" defined as follows:
-  //- if the order_id is even: apply MD5 hashing iteratively to the bill_raw_text field, once for each 'A' (capital 'A') present in the text. E.g. if the bill text is 'nbAAnllA', you would apply hashing three times iteratively (only if the order number is even)
+  //- if the order_id is even: apply MD5 hashing iteratively to the bill_raw_text field, once for each 'A' (capital 'A') present in the text.
+  // E.g. if the bill text is 'nbAAnllA', you would apply hashing three times iteratively (only if the order number is even)
   //- if the order_id is odd: apply SHA256 hashing to the bill text
   //Finally, check if there are any duplicate on the new column
   Exercise4()
 
-  private def WarmUp1() {
+  private def WarmUp1(): Unit = {
 
     println("\nWarm Up 1:\n")
 
@@ -41,7 +43,7 @@ object lotds extends App with org.sparksession.spark {
     println("Number of sellers: " + sellers.count())
 
     println("Number of Products sold at least once: " + products.distinct().count())
-//    println("Number of Products sold at least once: " + products.select(countDistinct("*")).collect()(0)(0))
+    //    println("Number of Products sold at least once: " + products.select(countDistinct("*")).collect()(0)(0))
     val prodInMoreOrders = sales
       .groupBy("product_id")
       .agg(count("*"))
@@ -52,7 +54,7 @@ object lotds extends App with org.sparksession.spark {
 
   }
 
-  private def WarmUp2(){
+  private def WarmUp2(): Unit = {
 
     println("\nWarm Up 2\n")
 
@@ -63,29 +65,87 @@ object lotds extends App with org.sparksession.spark {
 
   }
 
-  private def Exercise1(){
+  private def Exercise1(): Unit = {
 
     println("\nExercise 1\n")
 
-    val avgPrice = sales.join(products)
-      .agg(avg(col("price") * col("num_pieces_sold")))
+    val avgPrice = sales.join(products, "product_id")
+      .agg(avg(products("price") * sales("num_pieces_sold")))
 
     println("Average Price: " + avgPrice.collect()(0)(0))
 
   }
 
-  private def Exercise2(){
+  private def Exercise2(): Unit = {
 
+    println("\nExercise 2\n")
+
+    val sellersQuota = sales.join(sellers, "seller_id")
+      .groupBy(sellers("seller_id"))
+      .agg(avg(sales("num_pieces_sold") / col("daily_target")))
+
+    println("Sellers Quota: " + sellersQuota.collect()(0)(0))
 
   }
 
-  private def Exercise3(){
+  private def Exercise3(): Unit = {
 
+    println("\nExercise 3\n")
+
+    // ventas por vendedor y producto
+    val salesByProdSell = sales.groupBy("product_id", "seller_id")
+      .agg(sum("num_pieces_sold").alias("num_pieces_sold"))
+      .withColumn("rank_desc", dense_rank().over(Window.partitionBy("product_id").orderBy(desc("num_pieces_sold"))))
+      .withColumn("rank_asc", dense_rank().over(Window.partitionBy("product_id").orderBy(asc("num_pieces_sold"))))
+
+    // persona con menos ventas por producto
+    val least = salesByProdSell.select(col("product_id"), col("seller_id").alias("least_seller_id"))
+      .filter("rank_asc == 1")
+      .orderBy("product_id")
+
+    // segunda persona con más ventas por producto
+    val most2 = salesByProdSell.select(col("product_id"), col("seller_id").alias("sec_most_seller_id"))
+      .filter("rank_desc == 2")
+      .orderBy("product_id")
+
+    // tabla unificada
+    val unified = most2.join(least, "product_id")
+      .orderBy("product_id")
+
+    println("Second most selling and least selling person by product: ")
+    unified.filter("sec_most_seller_id <> least_seller_id")
+      .show()
+
+    println("Second most selling and least selling person for product 0: ")
+    unified.filter("product_id == 0")
+      .show()
 
   }
 
-  private def Exercise4(){
+  private def Exercise4(): Unit = {
 
+    //    def funct(order_id: Column, bill_text: String): Unit = {
+    //
+    //      var ret = bill_text.encode("utf-8")
+    //      if (order_id.cast("int") % 2 == 0) {
+    //        var NumA = bill_text.count("A")
+    //        for (_c in range(0, NumA)) {
+    //          ret = hashlib.md5(ret).hexdigest().encode("utf-8")
+    //        }
+    //        ret = ret.decode("utf-8")
+    //      } else {
+    //        ret = hashlib.sha256(ret).hexdigest()
+    //      }
+    //      return ret
+    //    }
+    //
+    //    var funct = spark.udf.register("funct", funct)
+    //
+    //    sales.withColumn("hashed_bill", funct(col("order_id"), col("bill_raw_text")))
+    //      .groupBy("hashed_bill")
+    //      .agg(count("*").alias("count"))
+    //      .filter("cnt > 1")
+    //      .show()
 
   }
 
