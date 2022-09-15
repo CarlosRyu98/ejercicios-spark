@@ -47,69 +47,79 @@ object Joins extends App with org.sparksession.spark {
   // Solo muestra los valores que están en ambos dfs
   private def innerJoin(): Unit = {
     println("Inner Join")
-    empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "inner")
-      .show(false)
+    val innerJoin = empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "inner")
+
+    innerJoin.show(false)
+    innerJoin.explain(true)
   }
 
   // Left Outer Join:
   // Muestra todos los valores del primer df y sus matches en el segundo
   private def leftOuterJoin(): Unit = {
     println("Left Outer Join")
-    empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "left")
-      .show(false)
-    empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "leftouter")
-      .show(false)
+    val leftOuterJoin = empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "left")
+    //    val leftOuterJoin = empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "leftouter")
+
+    leftOuterJoin.show(false)
+    leftOuterJoin.explain(true)
   }
 
   // Full Outer Join:
   // Muestra todos los valores, aunque queden nulos
   private def fullOuterJoin(): Unit = {
     println("Full Outer Join")
-    empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "outer")
-      .show(false)
-    empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "full")
-      .show(false)
-    empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "fullouter")
-      .show(false)
+    val fullOuterJoin = empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "outer")
+    //    val fullOuterJoin = empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "full")
+    //    val fullOuterJoin = empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "fullouter")
+
+    fullOuterJoin.show(false)
+    fullOuterJoin.explain(true)
   }
 
   // Right Outer Join:
   // Muestra todos los valores del segundo df y sus matches en el primero
   private def rightOuterJoin(): Unit = {
     println("Right Outer Join")
-    empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "right")
-      .show(false)
-    empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "rightouter")
-      .show(false)
+    val rightOuterJoin = empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "right")
+    //    val rightOuterJoin = empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "rightouter")
+
+    rightOuterJoin.show(false)
+    rightOuterJoin.explain(true)
   }
 
   // Left Semi Join:
   // Un Left Joi que solo muestra las columnas del primer df
   private def leftSemiJoin(): Unit = {
     println("Left Semi Join")
-    empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "leftsemi")
-      .show(false)
+    val leftSemiJoin = empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "leftsemi")
+
+    leftSemiJoin.show(false)
+    leftSemiJoin.explain(true)
   }
 
   // Left Anti Join:
   // Solo muestra las columnas del primer df que no tienen match
   private def leftAntiJoin(): Unit = {
     println("Left Anti Join")
-    empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "leftanti")
-      .show(false)
+    val leftAntiJoin = empDF.join(deptDF, empDF("emp_dept_id") === deptDF("dept_id"), "leftanti")
+
+    leftAntiJoin.show(false)
+    leftAntiJoin.explain(true)
   }
 
   // Self Join:
   // Sirve para unir el df consigo mismo
   private def selfJoin(): Unit = {
     println("Semi Join")
-    empDF.as("emp1")
+    val selfJoin = empDF.as("emp1")
       .join(empDF.as("emp2"),
         col("emp1.superior_emp_id") === col("emp2.emp_id"), "inner")
       .select(col("emp1.emp_id"), col("emp1.name"),
         col("emp2.emp_id").as("superior_emp_id"),
         col("emp2.name").as("superior_emp_name"))
-      .show(false)
+
+    selfJoin.show(false)
+    selfJoin.explain(true)
   }
 
 
